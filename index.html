@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNK Racing Team - Pasja do Kartingu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        'custom-black': '#1a1a1a',
+                        'custom-gray': '#808080'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-custom-black/90 text-white z-50 py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="assets/logo.webp" alt="LNK Racing Team Logo" class="h-12">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover-underline">O nas</a>
+                <a href="#tracks" class="hover-underline">Tory</a>
+                <a href="#times" class="hover-underline">Czasy</a>
+                <a href="#gallery" class="hover-underline">Galeria</a>
+                <a href="#events" class="hover-underline">Wydarzenia</a>
+                <a href="#media" class="hover-underline">Media</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <iframe 
+            class="hero-video" 
+            src="https://drive.google.com/file/d/1_yWIdNgxcTiK4dQWmKLQAdK878UQGaEX/preview" 
+            allow="autoplay" 
+            allowfullscreen
+        ></iframe>
+        <div class="relative z-20 flex flex-col items-center justify-center h-full text-white">
+            <img src="assets/logo.webp" alt="LNK Racing Team Logo" class="w-48 mb-8 animate-fade-in">
+            <h1 class="text-6xl font-bold mb-4 animate-fade-in text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5)">LNK Racing Team</h1>
+            <p class="text-xl mb-8 animate-fade-in">Legion Niezrównowazonych Kierowców</p>
+            <div class="flex gap-4">
+                <a href="#about" class="bg-gold text-black px-6 py-2 rounded-full hover:bg-opacity-90 transition font-semibold">Poznaj nas</a>
+                <a href="#times" class="border-2 border-gold text-gold px-6 py-2 rounded-full hover:bg-gold hover:text-black transition font-semibold">Nasze czasy</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- O nas Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-custom-black">O nas</h2>
+            <div class="about-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-custom-black">Nasza Historia</h3>
+                        <p class="text-lg leading-relaxed text-custom-gray mb-6">
+                            Jesteśmy 16-osobową grupą pasjonatów kartingu, którzy dzielą wspólną pasję do wyścigów i rywalizacji.
+                            Jako LNK Racing Team, regularnie spotykamy się na torach, gdzie doskonalimy swoje umiejętności i rywalizujemy o najlepsze czasy.
+                        </p>
+                        <p class="text-lg leading-relaxed text-custom-gray">
+                            Nasza grupa to nie tylko zespół wyścigowy, to prawdziwa rodzina połączona pasją do motorsportu.
+                            Każdy z nas wnosi coś unikalnego do zespołu, tworząc atmosferę zdrowej rywalizacji i wzajemnego wsparcia.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Miejsce na przyszłe zdjęcia -->
+                        <div class="bg-gray-100 rounded-lg h-48"></div>
+                        <div class="bg-gray-100 rounded-lg h-48"></div>
+                        <div class="bg-gray-100 rounded-lg h-48"></div>
+                        <div class="bg-gray-100 rounded-lg h-48"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section id="tracks" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-custom-black">Nasze Tory</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- E1GOKART Poznań - Gokarty Skórzewo -->
+                <div class="track-card">
+                    <img src="assets/E1_Skorzewo_1.png" alt="E1GOKART Skórzewo" class="track-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E1GOKART Poznań - Skórzewo</h3>
+                        <p class="text-custom-gray mb-4">Jeden z najnowocześniejszych torów kartingowych w Polsce. Dwupoziomowy tor halowy z osobną nitką zewnętrzną dla gokartów dziecięcych.</p>
+                        <div class="track-details mb-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-custom-gray">
+                                <div>
+                                    <p>📏 Długość toru: 600m</p>
+                                    <p>🏗️ Powierzchnia: 2500m²</p>
+                                    <p>🏎️ Gokarty: Sodi SR5, GT5-R</p>
+                                </div>
+                                <div>
+                                    <p>🎯 Poziomy: 2</p>
+                                    <p>🚗 24 gokarty seniorskie</p>
+                                    <p>🎮 System pomiaru czasu</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-custom-gray border-t pt-4">
+                            <p>📍 ul. Cisowa 6, 60-185 Skórzewo</p>
+                            <p>📱 +48 607 111 125</p>
+                            <div class="flex gap-2 mt-2">
+                                <a href="https://poznan-skorzewo.e1gokart.pl" target="_blank" class="bg-custom-black text-white px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Strona www</a>
+                                <a href="https://rezerwacjepoznan.e1gokart.pl" target="_blank" class="bg-gold text-black px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Rezerwuj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E1GOKART Poznań - Gokarty Rabowice -->
+                <div class="track-card">
+                    <img src="assets/E1_Rabowice_1.png" alt="E1GOKART Rabowice" class="track-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E1GOKART Poznań - Rabowice</h3>
+                        <p class="text-custom-gray mb-4">Najnowszy tor w rodzinie E1GOKART. Nowoczesny obiekt z profesjonalnym torem kartingowym, planowane otwarcie w wakacje 2024.</p>
+                        <div class="track-details mb-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-custom-gray">
+                                <div>
+                                    <p>🏗️ Nowy obiekt</p>
+                                    <p>🏎️ Gokarty: Sodi SR5</p>
+                                    <p>🎮 System pomiaru czasu</p>
+                                </div>
+                                <div>
+                                    <p>🚗 Flota nowych gokartów</p>
+                                    <p>🎯 Profesjonalny tor</p>
+                                    <p>🌟 Otwarcie: Wakacje 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-custom-gray border-t pt-4">
+                            <p>📍 Rabowice k. Poznania</p>
+                            <p>📱 +48 607 111 959</p>
+                            <a href="https://poznan-rabowice.e1gokart.pl" target="_blank" class="bg-custom-black text-white px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Strona www</a>
+                                <a href="https://rezerwacjerabowice.e1gokart.pl/" target="_blank" class="bg-gold text-black px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Rezerwuj</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartodrom Gostyń -->
+                <div class="track-card">
+                    <img src="assets/Kartodrom_Gostyn_1.png" alt="Kartodrom Gostyń" class="track-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kartodrom Gostyń</h3>
+                        <p class="text-custom-gray mb-4">Profesjonalny tor kartingowy z wieloletnią tradycją. Oferuje różne konfiguracje toru i organizuje zawody kartingowe na najwyższym poziomie.</p>
+                        <div class="track-details mb-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-custom-gray">
+                                <div>
+                                    <p>📏 Długość toru: 820m</p>
+                                    <p>↔️ Szerokość: 8-12m</p>
+                                    <p>🏎️ Gokarty: Rotax, Sodi</p>
+                                </div>
+                                <div>
+                                    <p>🌟 Homologacja PZM</p>
+                                    <p>🏆 Zawody kartingowe</p>
+                                    <p>🎮 Profesjonalny timing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-custom-gray border-t pt-4">
+                            <p>📍 ul. Starogostyńska 11a, 63-800 Gostyń</p>
+                            <p>📱 +48 65 572 31 11</p>
+                            <div class="flex gap-2 mt-2">
+                                <a href="https://kartodrom-gostyn.pl" target="_blank" class="bg-custom-black text-white px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Strona www</a>
+                                <a href="https://kartodrom-gostyn.pl/rezerwacja" target="_blank" class="bg-gold text-black px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Rezerwuj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Le Mans Wrocław -->
+                <div class="track-card">
+                    <img src="assets/LeMans_Wroclaw_1.png" alt="Le Mans Wrocław" class="track-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Le Mans Wrocław</h3>
+                        <p class="text-custom-gray mb-4">Największy kryty tor kartingowy we Wrocławiu. Dwupoziomowy tor z mostem i tunelem, oferujący emocjonujące wyścigi przez cały rok.</p>
+                        <div class="track-details mb-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-custom-gray">
+                                <div>
+                                    <p>📏 Długość toru: 450m</p>
+                                    <p>🏎️ Gokarty: Sodi GT4-R</p>
+                                    <p>🎮 System MyLaps</p>
+                                </div>
+                                <div>
+                                    <p>🌟 Tor dwupoziomowy</p>
+                                    <p>🏆 Ligowe wyścigi</p>
+                                    <p>🎯 12 zakrętów</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-custom-gray border-t pt-4">
+                            <p>📍 ul. Rogowska 127, 54-440 Wrocław</p>
+                            <p>📱 +48 71 794 66 85</p>
+                            <div class="flex gap-2 mt-2">
+                                <a href="https://wroclaw.lemans.pl" target="_blank" class="bg-custom-black text-white px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Strona www</a>
+                                <a href="https://wroclaw.lemans.pl/rezerwacja" target="_blank" class="bg-gold text-black px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Rezerwuj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canpol Racing -->
+                <div class="track-card">
+                    <img src="assets/Canpol_Racing_1.png" alt="Canpol Racing Człuchów" class="track-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Canpol Racing</h3>
+                        <p class="text-custom-gray mb-4">Profesjonalny tor kartingowy w Człuchowie, znany z organizacji prestiżowych zawodów kartingowych. Oferuje różnorodne konfiguracje toru i profesjonalny sprzęt.</p>
+                        <div class="track-details mb-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-custom-gray">
+                                <div>
+                                    <p>📏 Długość toru: 1200m</p>
+                                    <p>↔️ Szerokość: 8-10m</p>
+                                    <p>🏎️ Gokarty: Rotax, TonyKart</p>
+                                </div>
+                                <div>
+                                    <p>🌟 Homologacja PZM</p>
+                                    <p>🏆 Zawody międzynarodowe</p>
+                                    <p>🎮 Profesjonalny timing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-custom-gray border-t pt-4">
+                            <p>📍 ul. Jerzego Waldorffa 2, 77-300 Człuchów</p>
+                            <div class="flex gap-2 mt-2">
+                                <a href="https://www.facebook.com/canpolracing" target="_blank" class="bg-custom-black text-white px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kinepolis -->
+                <div class="track-card">
+                    <img src="assets/Tor_Kinepolis.png" alt="GoKart Poznań Kinepolis" class="track-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">GoKart Poznań - Kinepolis</h3>
+                        <p class="text-custom-gray mb-4">Profesjonalny tor kartingowy przy centrum Kinepolis. Idealny zarówno dla początkujących jak i zaawansowanych kierowców. Tor z charakterystycznymi zakrętami i długą prostą.</p>
+                        <div class="track-details mb-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-custom-gray">
+                                <div>
+                                    <p>📏 Długość toru: 400m</p>
+                                    <p>🏎️ Gokarty: RiMO ALPHA3</p>
+                                    <p>🎮 System pomiaru czasu</p>
+                                </div>
+                                <div>
+                                    <p>🌟 Oświetlenie LED</p>
+                                    <p>🏆 Organizacja zawodów</p>
+                                    <p>🎯 Szkolenia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-custom-gray border-t pt-4">
+                            <p>📍 ul. Bolesława Krzywoustego 72, Poznań</p>
+                            <p>📱 +48 61 871 86 46</p>
+                            <div class="flex gap-2 mt-2">
+                                <a href="https://gokartpoznan.pl" target="_blank" class="bg-custom-black text-white px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Strona www</a>
+                                <a href="https://gokartpoznan.pl/rezerwacja" target="_blank" class="bg-gold text-black px-3 py-1 rounded-full text-xs hover:bg-opacity-80 transition">Rezerwuj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-custom-black">Galeria</h2>
+            <div class="gallery-grid">
+                <!-- Miejsca na zdjęcia -->
+                <div class="gallery-item bg-gray-100"></div>
+                <div class="gallery-item bg-gray-100"></div>
+                <div class="gallery-item bg-gray-100"></div>
+                <div class="gallery-item bg-gray-100"></div>
+                <div class="gallery-item bg-gray-100"></div>
+                <div class="gallery-item bg-gray-100"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-custom-black">Nadchodzące Wydarzenia</h2>
+            <div class="space-y-6">
+                <div class="event-card p-6">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="text-xl font-bold">Wyścig na torze Skórzewo</h3>
+                            <p class="text-custom-gray">Kolejna runda naszych zawodów</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-gold font-bold">12.01.2024</p>
+                            <p class="text-custom-gray">18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dodaj więcej wydarzeń tutaj -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabela czasów -->
+    <section id="times" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-custom-black">Nasze czasy</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden" id="timesTable">
+                    <thead class="bg-custom-black text-gold">
+                        <tr>
+                            <th class="px-6 py-3 text-left">Lp.</th>
+                            <th class="px-6 py-3 text-left">Kierowca</th>
+                            <th class="px-6 py-3 text-left sortable">Kinepolis 2025</th>
+                            <th class="px-6 py-3 text-left sortable">Skórzewo</th>
+                            <th class="px-6 py-3 text-left sortable">Rabowice</th>
+                            <th class="px-6 py-3 text-left sortable">Fastrack</th>
+                            <th class="px-6 py-3 text-left sortable">Gostyń</th>
+                            <th class="px-6 py-3 text-left sortable">Le Mans Wrocław</th>
+                            <th class="px-6 py-3 text-left sortable">Canpol Człuchów</th>
+                            <th class="px-6 py-3 text-left sortable">Kinepolis 2024</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-custom-gray">
+                        <tr>
+                            <td class="px-6 py-3">1</td>
+                            <td class="px-6 py-3">Jędrzej Wachoński</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">55.031 / 45.428</td>
+                            <td class="px-6 py-3">43.314</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">54.980</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">39.93</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">2</td>
+                            <td class="px-6 py-3">Michał Lewandowski</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">57.217 / 45.513</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">55.399</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">40.34</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">3</td>
+                            <td class="px-6 py-3">Błażej Czapnik</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">56.948 / 45.141</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">55.418</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">41.82</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">4</td>
+                            <td class="px-6 py-3">Maciej Lewandowski</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">57.817 / 45.151</td>
+                            <td class="px-6 py-3">44.507</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">54.013</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">41.61</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">5</td>
+                            <td class="px-6 py-3">Mateusz Kaźmierowski</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">58.066 / 45.715</td>
+                            <td class="px-6 py-3">43.475</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">53.578</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">41.11</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">6</td>
+                            <td class="px-6 py-3">Kacper Kwietniewski</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">1:03.433 / 49.508</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">58.851</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">43.20</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">7</td>
+                            <td class="px-6 py-3">Arek Hodowaniec</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">55.956 / 44.810</td>
+                            <td class="px-6 py-3">42.887</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">53.827</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">39.77</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">8</td>
+                            <td class="px-6 py-3">Krzysztof Warmus</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">56.948 / 46.478</td>
+                            <td class="px-6 py-3">44.478</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">53.599</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">40.71</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">9</td>
+                            <td class="px-6 py-3">Kacper Frąckowiak</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">56.163 / 46.856</td>
+                            <td class="px-6 py-3">43.102</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">54.034</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">40.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">10</td>
+                            <td class="px-6 py-3">Adam Rudziewicz</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">56.177 / 44.847</td>
+                            <td class="px-6 py-3">43.399</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">54.075</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">40.80</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">11</td>
+                            <td class="px-6 py-3">Jan Niewiadomski</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">58.658 / 46.236</td>
+                            <td class="px-6 py-3">44.374</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">12</td>
+                            <td class="px-6 py-3">Bartosz Fąs</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">58.809 / 46.609</td>
+                            <td class="px-6 py-3">44.105</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">13</td>
+                            <td class="px-6 py-3">Aleksander Kazimierczak</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">49.008</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-3">14</td>
+                            <td class="px-6 py-3">Michał Fytak</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                            <td class="px-6 py-3">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section id="media" class="py-12 bg-custom-black text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-gold">Śledź nas</h2>
+            <div class="flex justify-center gap-8">
+                <a href="https://www.instagram.com/lnk_racing_team" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@LNKRacingTeam" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@lnk.racing.team" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Funkcja do sortowania tabeli
+        function sortTable(columnIndex) {
+            const table = document.getElementById('timesTable');
+            const tbody = table.getElementsByTagName('tbody')[0];
+            const rows = Array.from(tbody.getElementsByTagName('tr'));
+            const header = table.getElementsByTagName('th')[columnIndex];
+            
+            const isAscending = !header.classList.contains('asc');
+            
+            // Reset all headers
+            table.querySelectorAll('th').forEach(th => {
+                th.classList.remove('asc', 'desc');
+            });
+            
+            header.classList.add(isAscending ? 'asc' : 'desc');
+
+            rows.sort((a, b) => {
+                const aValue = a.getElementsByTagName('td')[columnIndex].textContent;
+                const bValue = b.getElementsByTagName('td')[columnIndex].textContent;
+                
+                if (aValue === '-' && bValue === '-') return 0;
+                if (aValue === '-') return 1;
+                if (bValue === '-') return -1;
+                
+                const aNum = parseFloat(aValue.split('/')[0]);
+                const bNum = parseFloat(bValue.split('/')[0]);
+                
+                return isAscending ? aNum - bNum : bNum - aNum;
+            });
+
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // Dodawanie event listenerów do nagłówków
+        document.querySelectorAll('th.sortable').forEach((header, index) => {
+            header.addEventListener('click', () => sortTable(index + 2)); // +2 bo pierwsze dwie kolumny to Lp. i Kierowca
+        });
+    </script>
+</body>
+</html> 
