@@ -38,3 +38,5 @@ git clone https://github.com/MowiaMiSushi/LNK_Racing_Team.git
 ## Licencja
 
 Wszelkie prawa zastrzeżone © 2024 LNK Racing Team 
+
+Strona jest własnością LNK Racing Team. Twórcą strony jest Aleksander Wacławik.

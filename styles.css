@@ -243,11 +243,69 @@ video {
     border-radius: 1rem;
     overflow: hidden;
     border-left: 4px solid var(--color-gold);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .event-card:hover {
     transform: translateX(5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-left-width: 8px;
+}
+
+.event-card h3 {
+    color: var(--color-black);
+    transition: color 0.3s ease;
+}
+
+.event-card:hover h3 {
+    color: var(--color-gold);
+}
+
+.event-card .text-gold {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.event-card .text-custom-gray {
+    font-size: 0.95rem;
+}
+
+/* Dodaj ikonkę kalendarza */
+.event-card .text-right {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.event-card .text-right::before {
+    content: '📅';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+/* Responsywność dla wydarzeń */
+@media (max-width: 640px) {
+    .event-card {
+        margin: 0 0.5rem;
+    }
+    
+    .event-card .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .event-card .text-right {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .event-card .text-right::before {
+        display: none;
+    }
 }
 
 /* About section enhancement */
@@ -307,4 +365,33 @@ video {
 
 .table-highlight {
     background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Hero section styles */
+#youtube-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+#youtube-player iframe {
+    width: 100vw;
+    height: 100vh;
+    transform: scale(1.5);
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #youtube-player iframe {
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #youtube-player iframe {
+        width: 177.78vh;
+    }
 } 
